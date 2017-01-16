@@ -21,7 +21,7 @@ namespace DemoWinFormApp
         {
             switch (cbxCities.SelectedIndex)
             {
-                case 0: MessageBox.Show("","");
+                case 0: MessageBox.Show("Your selected city is: Surat", "Welcome");
                     break;
             }
         }
