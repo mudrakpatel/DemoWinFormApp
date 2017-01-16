@@ -10,11 +10,20 @@ using System.Windows.Forms;
 
 namespace DemoWinFormApp
 {
-    public partial class Form1 : Form
+    public partial class MyForm : Form
     {
-        public Form1()
+        public MyForm()
         {
             InitializeComponent();
+        }
+
+        private void cbxCities_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (cbxCities.SelectedIndex)
+            {
+                case 0: MessageBox.Show("","");
+                    break;
+            }
         }
     }
 }

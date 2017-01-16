@@ -1,6 +1,6 @@
 ﻿namespace DemoWinFormApp
 {
-    partial class Form1
+    partial class MyForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.cbxCities = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // Form1
+            // cbxCities
+            // 
+            this.cbxCities.FormattingEnabled = true;
+            this.cbxCities.Items.AddRange(new object[] {
+            "Surat",
+            "NewYork",
+            "Toronto"});
+            this.cbxCities.Location = new System.Drawing.Point(13, 13);
+            this.cbxCities.Name = "cbxCities";
+            this.cbxCities.Size = new System.Drawing.Size(121, 21);
+            this.cbxCities.TabIndex = 0;
+            this.cbxCities.SelectedIndexChanged += new System.EventHandler(this.cbxCities_SelectedIndexChanged);
+            // 
+            // MyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(506, 262);
-            this.Name = "Form1";
+            this.Controls.Add(this.cbxCities);
+            this.Name = "MyForm";
             this.Text = "Form1";
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.ComboBox cbxCities;
     }
 }
 
